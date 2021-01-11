@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ToDoList</string>
+    <string name="welcome_message">Welcome to Milan\'s Todo List</string>
+    <string name="add_symbol">+</string>
+    <string name="add_cancel">Cancel</string>
+    <string name="add_save">Save</string>
 </resources>
