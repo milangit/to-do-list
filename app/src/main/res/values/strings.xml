@@ -2,6 +2,8 @@
     <string name="app_name">ToDoList</string>
     <string name="welcome_message">Welcome to Milan\'s Todo List</string>
     <string name="add_symbol">+</string>
-    <string name="add_cancel">Cancel</string>
-    <string name="add_save">Save</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="save_text">Save</string>
+    <string name="item_name_text">Item name</string>
+    <string name="item_urgency_text">Item urgency</string>
 </resources>

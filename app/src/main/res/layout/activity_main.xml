@@ -22,6 +22,11 @@
         android:textColor="@color/black"
         />
 
+    //list functionality
+    /*
+    list
+    */
+    list
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/todo_item_recycler_view"
         android:layout_width="0dp"
