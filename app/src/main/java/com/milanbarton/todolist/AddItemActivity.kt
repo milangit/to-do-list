@@ -7,19 +7,35 @@ import android.os.PersistableBundle
 import android.view.View
 import android.widget.CheckBox
 import android.widget.EditText
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import org.w3c.dom.Text
 
 class AddItemActivity : AppCompatActivity() {
 
-    private lateinit var editTextName: EditText
-    private lateinit var checkBoxUrgent: CheckBox
+    private lateinit var itemNameEditText: EditText
+    private lateinit var isUrgencyCheckBox: CheckBox
+    private lateinit var titleTextView: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_item)
 
-        editTextName = findViewById(R.id.item_name_edit_text)
-        checkBoxUrgent = findViewById(R.id.is_urgent_checkbox)
+        itemNameEditText = findViewById(R.id.item_name_edit_text)
+        isUrgencyCheckBox = findViewById(R.id.is_urgent_checkbox)
+        titleTextView = findViewById(R.id.add_item_title_text_view)
+
+        val itemName = intent.getStringExtra("ITEM_NAME")
+        val itemUrgency = intent.getBooleanExtra("ITEM_URGENCY", false)
+
+        if (itemName != null) {
+            itemNameEditText.setText(itemName)
+            titleTextView.setText(R.string.edit_item_message)
+        }
+        if (itemUrgency == true)
+        {
+            isUrgencyCheckBox.isChecked = true
+        }
     }
 
     public fun saveItemAction(view: View) {
